@@ -1,0 +1,40 @@
+html {
+    background-color: black;
+    color: white;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    
+    margin: 0;
+    margin-top: 3.5rem;
+    margin-left: 4rem;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+img {
+    cursor: default;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+* {
+    user-select: none;
+}
+
+.dot {
+    font-weight: bold;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}

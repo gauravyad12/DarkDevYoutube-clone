@@ -1,0 +1,41 @@
+.nav {
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    top: 3.5rem;
+    left: 0;
+
+    width: 4rem;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.navitem {
+    border-radius: 0.5em;
+    cursor: pointer;
+
+    height: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navitem:hover {
+    background-color: #1a1a1a;
+}
+.navitem:active {
+    background-color: #2c2c2c;
+}
+
+.navimg {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.navlabel {
+    font-size: 0.6rem;
+    padding-top: 1em;
+}

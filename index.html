@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DarkDev YouTube</title>
+
+        <script>
+            const details = navigator.userAgent;
+            const regexp = /android|iphone|kindle|ipad/i;
+            if (regexp.test(details))
+                window.location.href = "youtubeM.html";
+            else
+                window.location.href = "youtube.html";
+        </script>
+
+        <style>
+            body {
+                background-color: black;
+
+                height: 100dvh;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                width: 70vmin;
+            }
+        </style>
+
+    </head>
+    <body">
+        <img src="https://dhruv-dhaduk.github.io/assets/logos/colored/sasta_yt.png">
+    </body>
+</html>

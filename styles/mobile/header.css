@@ -1,0 +1,54 @@
+.header {
+    background-color: black;
+    width: 100vw;
+    height: 3rem;
+    margin: 0;
+    border-bottom: 1px solid #2d2d2d;
+    vertical-align: middle;
+    display: flex;
+    align-content: center;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+
+    z-index: 1;
+}
+
+.headeritem {
+    background-color: black;
+    display: inline-block;
+    height: 3rem;
+    text-align: center;
+    vertical-align: middle;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headeritem:active {
+    background-color: #2c2c2c;
+}
+
+.headerimg {
+    height: 1.28rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+}
+
+.form {
+    right: 0;
+    margin-right: 3rem;
+}
+
+.source-code {
+    right: 0;
+}

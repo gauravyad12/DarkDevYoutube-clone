@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+
+    <head>
+
+        <title>DarkDev YouTube</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="https://dhruv-dhaduk.github.io/assets/logos/colored/youtube.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="styles/desktop/generic.css">
+        <link rel="stylesheet" href="styles/desktop/header.css">
+        <link rel="stylesheet" href="styles/desktop/nav.css">
+        <link rel="stylesheet" href="styles/desktop/videofeed.css">
+        <link rel="stylesheet" href="styles/desktop/loading.css">
+        <link rel="stylesheet" href="styles/desktop/shortslist.css">
+        <link rel="stylesheet" href="styles/desktop/videoplayer.css">
+        
+        <script src="scripts/device.js" type="module"></script>
+        <script src="scripts/desktop/main.js" type="module"></script>
+        <script src="scripts/desktop/data.js" type="module"></script>
+        <script src="scripts/desktop/init.js" type="module"></script>
+        <script src="scripts/desktop/player.js" type="module"></script>
+        <script src="scripts/desktop/loader.js" type="module" defer></script>
+        <script src="scripts/desktop/refresh.js" type="module"></script>
+        <script src="scripts/desktop/scroll.js" type="module" defer></script>
+        <script src="scripts/lib.js" type="module"></script>
+        
+    </head>
+
+    <body>
+
+        <div class="header" id="header">
+            <div class="yticon" id="yt">
+                <img src="https://dhruv-dhaduk.github.io/assets/logos/colored/sasta_yt.png" class="ytimg" draggable="false">
+            </div>
+
+            <div class="headernav">
+
+                <a id="source-code" class="headernavitem" href="https://github.com/dhruv-dhaduk/sastayoutube" target="_blank">
+                    <img src="https://dhruv-dhaduk.github.io/assets/logos/colored/coding.png" class="headernavimg">
+                </a>
+
+                <!-- <a id="form" class="headernavitem" href="https://forms.gle/qgnJPobNPGyQgNp99" target="_blank">
+                    <img src="https://dhruv-dhaduk.github.io/assets/logos/white/form_white.png" class="headernavimg">
+                </a> -->
+
+            </div>
+        </div>
+
+        <div class="nav" id="nav">
+
+            <div class="navitem hometab">
+                <img class="navimg" src="https://dhruv-dhaduk.github.io/assets/logos/white/home_filled_white.png" draggable="false">
+                <p class="navlabel">Home</p>
+            </div>
+
+            <div class="navitem refreshtab" id="refresh">
+                <img class="navimg" src="https://dhruv-dhaduk.github.io/assets/logos/white/refresh_white.png" draggable="false">
+                <p class="navlabel">Refresh</p>
+            </div>
+
+            <div class="navitem shuffletab" id="shuffle">
+                <img class="navimg" src="https://dhruv-dhaduk.github.io/assets/logos/white/shuffle_white.png" draggable="false">
+                <p class="navlabel">Shuffle</p>
+            </div>
+
+            <div class="navitem backtotoptab" id="backtotop">
+                <img class="navimg" src="https://dhruv-dhaduk.github.io/assets/logos/white/back_to_top_white.png" draggable="false">
+                <p class="navlabel">Back to Top</p>
+            </div>
+
+            <div class="navitem closevideo" id="closevideo">
+                <img class="navimg" src="https://dhruv-dhaduk.github.io/assets/logos/white/close_white.png" draggable="falase">
+                <p class="navlabel">Close Video</p>
+            </div>
+
+        </div>
+
+        <div class="loading" id="loading">
+            <template id="loading-item-template">
+                <div class="loading-item">
+                    <div class="loading-thumbnail"></div>
+                    <div class="loading-info">
+                        <div class="loading-channel-icon"></div>
+                        <div class="loading-texts">
+                            <div class="loading-line"></div>
+                            <div class="loading-line"></div>
+                            <div class="loading-line loading-line-small"></div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+
+        <div class="main-container">
+
+            <div class="video-player" id="video-player">
+
+                <div class="iframe-container" id="iframe-container">
+                </div>
+
+                <div class="video-player-info">
+                    <div class="video-player-texts">
+                        <p class="video-player-title" id="video-player-title"></p>
+                        <p class="video-player-additional-info">
+                            <span class="video-player-views" id="video-player-views"></span> <span class="dot">&#183</span> <span class="video-player-uploaded" id="video-player-uploaded"></span>
+                        </p>
+                    </div>
+
+                    <div class="video-player-more-info">
+                        <div class="video-player-channel">
+                            <img class="video-player-channel-icon" id="video-player-channel-icon" src="">
+                            <div class="video-player-channel-info">
+                                <p class="video-player-channel-title" id="video-player-channel-title"></p>
+                                <p class="video-player-channel-subs" id="video-player-channel-subs"></p>
+                            </div>
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+    
+                        <div class="video-player-buttons">
+                            <button class="likebtn btn"> <span class="video-player-likes" id="video-player-likes"></span> </button>
+                            <button class="dislikebtn btn">&#183</button>
+                            <button class="sharebtn btn" id="sharebtn">Share</button>
+                            <button class="savebtn btn">Save</button>
+                            <button class="reportbtn btn">Report</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="video-feed" id="video-feed">
+    
+                <div class="shorts-feed" id="shorts-feed">
+                    <div class="shorts-header">
+                        <div class="shorts-icon-text"> <img class="shorts-icon" src="https://dhruv-dhaduk.github.io/assets/logos/colored/shorts.png" draggable="false"> <span class="shorts-heading">Shorts</span> </div>
+                    </div>
+        
+                    <div class="shorts-list" id="shorts-list">
+                    </div>
+
+                    <div class="shorts-leftscroll shorts-scroll" id="shorts-leftscroll">
+                        <img class="shorts-scroll-img" src="https://dhruv-dhaduk.github.io/assets/logos/white/left_arrow_white.png" draggable="false">
+                    </div>
+
+                    <div class="shorts-rightscroll shorts-scroll" id="shorts-rightscroll">
+                        <img class="shorts-scroll-img" src="https://dhruv-dhaduk.github.io/assets/logos/white/right_arrow_white.png" draggable="false">
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <template id="video-item-template">
+            <div class="video-item">
+                <div class="thumbnail-container">
+                    <img class="thumbnail-img" loading="lazy" draggable="false">
+                    <p class="duration"></p>
+                </div>
+                <div class="video-item-info">
+                    <a class="channel-icon-container" target="_blank">
+                        <img class="channel-icon">
+                    </a>
+                    <div class="video-item-texts">
+                        <p class="video-title"></p>
+                        <p class="video-channel-name"></p>
+                        <p class="video-additional-data"></p>
+                    </div>
+                    <a class="video-three-dots-container" target="_blank">
+                        <img class="video-three-dots" src="https://dhruv-dhaduk.github.io/assets/logos/white/three_dots_white.png">
+                    </a>
+                </div>
+            </div>
+        </template>
+
+        <template id="shorts-item-template">
+            <a class="shorts-item" target="_blank">
+                <img class="shorts-thumbnail" loading="lazy" draggable="false">
+                <div class="shorts-text">
+                    <p class="shorts-title"></p>
+                    <p class="shorts-views"></p>
+                </div>
+            </a>
+        </template>
+
+    </body>
+
+</html>
